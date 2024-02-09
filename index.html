@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Weather Dashboard</h1>
+
+    </div>
+
+    <div class="container">
+        <div class="search-container">
+            <div class="search">
+                <h2>Enter a location Name:</h2>
+                <input type="text" id="city-input" placeholder="Enter city/country name" style="height: 30px;">
+                <div class="button-container">
+                    <button id="search-Button">Search</button>
+                    <button id="change-theme" style="padding:2px">Change Theme</button>
+
+
+                </div>
+
+            </div>
+            <div id='map'></div>
+
+
+            <div class="search-history">
+
+                <h2>Search History </h2>
+                <ul id="history-list" style="cursor:pointer; flex: 1; align-items: self-start; margin-right: 10px;">
+                </ul>
+
+
+            </div>
+        </div>
+
+
+        <div class="display-outer-container">
+
+            <div class="display-container">
+                <div class="weather-info">
+                    <div class="weather-data">
+                        <div>
+                            <h1 id="city-name">City Name</h1>
+                            <h3 id="current-date">Current Date</h3>
+                        </div>
+
+                        <span id="temperature">Temperature:</span>
+                        <span id="humidity">Humidity:</span>
+                        <span id="windSpeed">Wind Speed:</span>
+                        <span id="sunrise">Sunrise:</span>
+                        <span id="sunset">Sunset:</span>
+
+                        <button id="change-temperature">Change Temperature</button>
+                    </div>
+
+                    <div class="icon-container">
+                        <img id="weather-icon" alt="" class="icon">
+                        <h2 id="description"></h2>
+                    </div>
+                </div>
+            </div>
+
+            <div id="forecast" class="forecast">
+                <div class="forecast-header">
+                    <h2>5-Day Forecast</h2>
+                    <button id="alert">Show Alert</button>
+                </div>
+
+                <div id="forecast-container" class="forecast-container">
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

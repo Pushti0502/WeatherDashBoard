@@ -1,0 +1,284 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial;
+}
+.theme-light {
+    --color-primary: #0f0a91;
+    --color-secondary: #ffffff;
+    --font-color: #000000;
+    --bg-image: url('https://img.freepik.com/free-vector/gorgeous-clouds-background-with-blue-sky-design_1017-25501.jpg');
+}
+.theme-dark {
+    --color-primary: #252525;
+    --color-secondary: #243133;
+    --font-color: #ffffff;
+    --bg-image: url('https://w0.peakpx.com/wallpaper/908/827/HD-wallpaper-clouds-sky-cloudy-dark-weather-thumbnail.jpg');
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: var(--color-secondary);
+    background-image: var(--bg-image);
+    /* background-color: var(--color-secondary); */
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+li {
+    border-bottom: 1px solid black;
+    padding: 5px;
+}
+
+.container {
+    max-width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex: 1;
+}
+.header {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    text-align: center;
+    padding: 6px;
+    margin-bottom: 20px;
+    flex: 1;
+    width: 100%;
+}
+.changetheme-container {
+    width: 130px;
+    position: absolute;
+    top: 28px;
+    right: 15px;
+    height: 30px;
+}
+
+.display-outer-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.display-container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    background-color: #f5f2f2;
+    gap: 20px;
+}
+.search-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--font-color);
+}
+
+.search {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+
+    flex-direction: column;
+}
+.search button {
+    padding: 7px;
+    height: 35px;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.button-container{
+    display:flex;
+    gap:10px
+}
+.search-history {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+#search-history-text {
+    display: none;
+}
+.forecast h2 {
+    color: var(--font-color);
+}
+.weather-info {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 2px;
+}
+
+.weather-data {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 20px;
+}
+.weather-data button {
+    width: 130px;
+}
+#map {
+    width: 300px;
+    height: 300px;
+}
+.forecast {
+    margin: 10px 0;
+    padding: 10px;
+    flex: 1;
+}
+.forecast-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex: 1;
+}
+.forecast-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.forecast-header button{
+    height: 30px;
+    width: 100px;
+    background-color: rgb(248, 81, 81);
+    border-radius: 20px;
+}
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.icon {
+    width: 200px;
+    height: 180px;
+}
+.card {
+    flex: 1;
+    width: 100%;
+    background-color: #f5f2f2;
+    padding: 15px;
+    border: 1px;
+    border-radius: 20px;
+    box-shadow: 3px 3px;
+    display: flex;
+    flex-direction: column;
+}
+.class {
+    height: 100%;
+    flex: 1;
+}
+
+@media only screen and (max-width: 1000px) {
+    .header {
+        padding: 2px;
+        font-size: 15px;
+    }
+    .container {
+        flex-direction: column;
+    }
+
+    .search h2 {
+        display: none;
+    }
+
+    .search button {
+        width: 30%;
+        height: 25px;
+        padding: 2px;
+    }
+    .search input {
+        width: 100%;
+    }
+    #search-history-text {
+        display: block;
+    }
+    #map {
+       
+        width: 300px;
+        height: 180px;
+    }
+    .close {
+        cursor: pointer;
+        padding-left: 10px;
+    }
+    .icon {
+        width: 100px;
+        height: 100px;
+    }
+    .forecast-container {
+        flex-direction: column;
+    }
+    .card {
+        height: 80px;
+        width: 100%;
+        flex-direction: row;
+        padding: 2px;
+    }
+    .class {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .class p,
+    h4 {
+        display: none;
+    }
+    .class img {
+        padding-right: 15px;
+    }
+   
+    .header {
+        font-size: 15px;
+    }
+    .changetheme-container{
+        display: none;
+    }
+   
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .forecast-container {
+        flex-direction: column;
+    }
+    .card {
+        height: 80px;
+        width: 100%;
+        flex-direction: row;
+        padding: 2px;
+    }
+    .class {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .class p,
+    h4 {
+        display: none;
+    }
+    .class img {
+        padding-right: 15px;
+    }
+    
+}
